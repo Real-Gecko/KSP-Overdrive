@@ -7,55 +7,46 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Overdrive</RootNamespace>
     <AssemblyName>Overdrive</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
+    <OutputPath>..\GameData\Overdrive</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
+    <OutputPath>..\GameData\Overdrive</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <CustomCommands>
-      <CustomCommands>
-        <Command>
-          <type>AfterBuild</type>
-          <command>cp ${TargetFile} /home/realgecko/Development/KSP/GameData/${ProjectName}</command>
-        </Command>
-        <Command>
-          <type>AfterBuild</type>
-          <command>cp ${TargetFile} ${SolutionDir}/GameData/${ProjectName}</command>
-        </Command>
-      </CustomCommands>
-    </CustomCommands>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
-    <StartAction>Program</StartAction>
-    <StartProgram>..\..\..\..\..\usr\bin\wine</StartProgram>
-    <StartArguments>/home/realgecko/Development/KSP/KSP_x64.exe</StartArguments>
-    <StartWorkingDirectory>..\..\KSP\</StartWorkingDirectory>
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\KSP\KSP_Data\Managed\Assembly-CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine">
-      <HintPath>..\..\KSP\KSP_Data\Managed\UnityEngine.dll</HintPath>
-    </Reference>
     <Reference Include="UICore">
       <HintPath>..\..\UICore\GameData\000_UICore\UICore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\Kerbal Space Program\KSP_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\Kerbal Space Program\KSP_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\Kerbal Space Program\KSP_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\Kerbal Space Program\KSP_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>

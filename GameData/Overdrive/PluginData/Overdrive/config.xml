@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <rect name="mainWindowRect">
+        <xmin>470</xmin>
+        <xmax>870</xmax>
+        <ymin>328</ymin>
+        <ymax>600</ymax>
+    </rect>
+    <string name="defaultSkinName">Overdrive</string>
+</config>
